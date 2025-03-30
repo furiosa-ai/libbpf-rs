@@ -27,7 +27,7 @@ path = "src/lib.rs"
 [features]
 # By default the crate uses a vendored libbpf, but requires other
 # necessary libs to be present on the system.
-default = ["libbpf-rs/default"]
+default = ["libbpf-rs/vendored"]
 
 [dependencies]
 anyhow = "1.0.40"

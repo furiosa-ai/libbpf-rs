@@ -351,7 +351,7 @@ dependencies = [
  "goblin",
  "libbpf-rs",
  "libbpf-rs-dev",
- "libbpf-sys",
+ "libbpf-sys 1.5.0+v1.5.0 (git+https://github.com/furiosa-ai/libbpf-sys?rev=5b90c02)",
  "libc",
  "log",
  "memmem",
@@ -369,7 +369,7 @@ dependencies = [
 name = "libbpf-rs-dev"
 version = "0.0.0"
 dependencies = [
- "libbpf-sys",
+ "libbpf-sys 1.5.0+v1.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde",
  "serde_json",
  "tempfile",
@@ -381,6 +381,16 @@ name = "libbpf-sys"
 version = "1.5.0+v1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2d8306b516a70a129cb6afed17c1e51e162d35aadfcc6339364addcebe32de90"
+dependencies = [
+ "cc",
+ "nix 0.29.0",
+ "pkg-config",
+]
+
+[[package]]
+name = "libbpf-sys"
+version = "1.5.0+v1.5.0"
+source = "git+https://github.com/furiosa-ai/libbpf-sys?rev=5b90c02#5b90c02a1809db026629091d5933ec42fcb48018"
 dependencies = [
  "cc",
  "nix 0.29.0",
