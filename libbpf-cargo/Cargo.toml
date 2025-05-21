@@ -42,7 +42,8 @@ tempfile = "3.3"
 clap = { version = "4.0.32", features = ["derive"] }
 # `libbpf` is unable to provide necessary backwards compatibility
 # guarantees so we have to explicitly opt-in to newer versions...
-libbpf-sys_restricted = { package = "libbpf-sys", version = ">=1.5.0, <=1.5.1", default-features = false }
+# libbpf-sys_restricted = { package = "libbpf-sys", version = ">=1.5.0, <=1.5.1", default-features = false }
+libbpf-sys = { git = "https://github.com/libbpf/libbpf-sys.git", rev = "3992fe7", default-features = false }
 
 [dev-dependencies]
 goblin = "0.9"
